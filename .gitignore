@@ -1,0 +1,41 @@
+# Gradle
+.gradle/
+.kotlin/
+build/
+/captures
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.fleet/
+
+# Local config / secrets
+local.properties
+*.keystore
+*.jks
+google-services.json
+secrets.properties
+
+# Native
+.externalNativeBuild
+.cxx
+
+# Generated / logs
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.hprof
+*.log
+output-metadata.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings
+.claude/settings.local.json
