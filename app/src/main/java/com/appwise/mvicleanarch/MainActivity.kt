@@ -7,10 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.appwise.mvicleanarch.presentation.ListScreen
 import com.appwise.mvicleanarch.ui.theme.MVICleanArchTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,28 +20,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             MVICleanArchTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    ListScreen(
+                        modifier = Modifier.padding(innerPadding),
+                        onBack = { finish() }
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MVICleanArchTheme {
-        Greeting("Android")
     }
 }
